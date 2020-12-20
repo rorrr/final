@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function A1(){
+    }
+    A1.prototype.say= function () {
+        alert("a1")
+    };
+    function A2(){
+        this.age=8;
+    }
+    A2.prototype=new A1();
+    A2.prototype.sayTwo= function () {
+      alert("a2")
+    };
+    var a3=new A2();
+    var a1=new A1();
+    a3.say();
+    a3.sayTwo();
+    alert('ds');
+</script>
+</body>
+</html>
